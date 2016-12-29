@@ -3,22 +3,29 @@
 }
 
 .tree-view {
-  color: @text-color;
   background-color: @base-background-color;
   font-weight: 300;
   letter-spacing: .4px;
 
+  .list-tree {
+    color: @text-color;
+  }
+
   .list-item.selected {
-    color: @text-color-selected;
+    color: @contrast-color;
   }
 
   .entry::before {
     height: 40px;
   }
+
   .entry.selected {
-    color: @contrast-color;
     &::before {
       background: @base-color;
+    }
+
+    > .list-item {
+      color: @contrast-color;
     }
   }
 
